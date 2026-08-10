@@ -1,10 +1,10 @@
-pipeline {
+ppipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE  = "your-docker-hub-username/static-website"
+    DOCKER_IMAGE  = "sidharth18/static-website"
     GIT_REPO_NAME = "python-flask-app"
-    GIT_USER_NAME = "Doom710"
+    GIT_USER_NAME = "sidharth-420"
   }
 
   options {
@@ -15,7 +15,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/Doom710/python-flask-app'
+        sh 'echo "checkout successful"'
+        //git branch: 'main', url: 'https://github.com/Doom710/python-flask-app'
       }
     }
 
