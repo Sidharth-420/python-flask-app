@@ -57,7 +57,7 @@ ppipeline {
       steps {
         withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
           sh '''
-            git config user.email "xyz@gmail.com"
+            git config user.email "sidharthshai98@gmail.com"
             git config user.name "${GIT_USER_NAME}"
 
             sed -i "s|image: .*|image: ${DOCKER_IMAGE}:${BUILD_NUMBER}|g" k8s/deployment.yaml
